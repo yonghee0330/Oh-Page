@@ -1495,4 +1495,96 @@ section {
     .books-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
+
+    .editor-toolbar {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ---- HTML Editor ---- */
+.editor-toolbar {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.editor-toolbar-label {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    padding: 0 8px 0 4px;
+}
+
+.editor-toolbar-label i {
+    color: var(--color-accent);
+    margin-right: 4px;
+}
+
+.editor-btn {
+    padding: 8px 16px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.editor-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.editor-btn.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.editor-btn-save {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.editor-btn-save:hover {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-white);
+}
+
+.editor-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+body.editor-active .editor-editable {
+    outline: 2px dashed rgba(109, 40, 217, 0.75) !important;
+    outline-offset: 3px;
+    border-radius: 2px;
+    cursor: text;
+    min-height: 1em;
+}
+
+body.editor-active .editor-editable:focus {
+    outline-color: var(--color-accent);
+    background: rgba(109, 40, 217, 0.04);
 }

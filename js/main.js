@@ -74,8 +74,11 @@ const articlesData = {
 
 /* ---- Articles ---- */
 function initArticles() {
-    renderOngoingColumns();
-    renderArchive();
+    const ongoing = document.getElementById('ongoingColumns');
+    const featured = document.getElementById('archiveFeatured');
+
+    if (!ongoing?.dataset.baked) renderOngoingColumns();
+    if (!featured?.dataset.baked) renderArchive();
 
     const toggle = document.getElementById('archiveToggle');
     const list = document.getElementById('archiveList');

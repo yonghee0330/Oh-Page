@@ -404,6 +404,14 @@
         </div>
     </aside>
 
+    <!-- HTML 에디터 툴바 -->
+    <div id="editorToolbar" class="editor-toolbar" style="position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;gap:8px;padding:10px 14px;background:#fff;border:1px solid #e5ddd2;border-radius:40px;box-shadow:0 8px 40px rgba(74,55,40,0.12);">
+        <span class="editor-toolbar-label"><i class="fas fa-pen"></i> 편집</span>
+        <button type="button" id="editorToggle" class="editor-btn">편집 모드</button>
+        <button type="button" id="editorSave" class="editor-btn editor-btn-save">HTML 저장</button>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/editor.js"></script>
 </body>
 </html>
