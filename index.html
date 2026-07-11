@@ -7,23 +7,22 @@
     <title>오수경 — 드라마 관찰자, 작가</title>
     <meta name="description" content="드라마 관찰자 오수경 작가의 포트폴리오, 기사, 출간도서 주문 페이지">
 
+    <!-- GitHub Pages: 끝 슬래시 없이 열리면 상대 경로가 깨짐 -->
+    <script>
+        (function () {
+            if (!location.hostname.endsWith('github.io')) return;
+            var path = location.pathname;
+            if (!path.endsWith('/') && !/\.[a-z0-9]+$/i.test(path.split('/').pop())) {
+                location.replace(path + '/' + location.search + location.hash);
+            }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <script>
-        (function () {
-            var root = '';
-            if (location.hostname.endsWith('github.io')) {
-                var seg = location.pathname.split('/').filter(Boolean)[0];
-                if (seg) root = '/' + seg;
-            }
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = root + '/css/style.css';
-            document.head.appendChild(link);
-        })();
-    </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="loaded">
 
@@ -405,17 +404,6 @@
         </div>
     </aside>
 
-    <script>
-        (function () {
-            var root = '';
-            if (location.hostname.endsWith('github.io')) {
-                var seg = location.pathname.split('/').filter(Boolean)[0];
-                if (seg) root = '/' + seg;
-            }
-            var script = document.createElement('script');
-            script.src = root + '/js/main.js';
-            document.body.appendChild(script);
-        })();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
