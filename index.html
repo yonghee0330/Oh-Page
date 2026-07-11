@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오수경 — 드라마 관찰자, 작가</title>
+    <meta name="description" content="드라마 관찰자 오수경 작가의 포트폴리오, 기사, 출간도서 주문 페이지">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loaded">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">오수경</a>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">글 모음</a></li>
+                <li><a href="#shop">출간도서</a></li>
+                <li><a href="#inquiry">문의</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="#cart" class="nav-icon" id="cartToggle" aria-label="장바구니">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count hidden" id="cartCount">0</span>
+                </a>
+                <a href="mailto:contact@example.com" class="nav-icon" aria-label="이메일">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-fullscreen" id="home">
+        <div class="hero-background" data-parallax="0.5"></div>
+        <div class="hero-overlay-gradient"></div>
+        <div class="hero-main-content">
+            <div class="hero-text-wrapper fade-in">
+                <span class="hero-label">드라마 관찰자 · 자유기고가</span>
+                <h1 class="hero-main-title">오수경</h1>
+                <p class="hero-description">
+                    드라마 속 명대사로 삶을 비추고, 일상과 세상 이야기를 글로 풀어냅니다.<br>
+                    누구나 가슴에 드라마 한 편씩은 품고 사는 것이라 믿습니다.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="hero-btn hero-btn-primary">글 읽기</a>
+                    <a href="#shop" class="hero-btn hero-btn-secondary">도서 구입</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="philosophy-section" id="about">
+        <div class="container">
+            <div class="philosophy-grid">
+                <div class="philosophy-image fade-in-scroll">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80" alt="오수경 작가">
+                </div>
+                <div class="philosophy-content fade-in-scroll">
+                    <div class="section-label">ABOUT</div>
+                    <h2 class="section-title">드라마를 관찰하는 사람</h2>
+                    <p class="philosophy-text">
+                        세상 모든 이야기에 호기심이 많아 주변을 두리번거리다 부딪히고 넘어지기를
+                        반복하면서도, 누군가의 이야기를 보고 듣기를 즐깁니다.
+                    </p>
+                    <p class="philosophy-text">
+                        작가를 꿈꿨지만 문예창작학과에 진학하고 나서야 글쓰기에 재능과 열정이
+                        없음을 깨달았습니다. 멀어진 꿈과 지켜야 할 현실 사이에서 방황하다가
+                        어제보다 나은 오늘을 살고 싶어 비영리단체 활동가가 되었고,
+                        동시에 자유기고가로 여러 매체에 글을 싣고 있습니다.
+                    </p>
+                    <div class="author-tags">
+                        <span class="author-tag">드라마 평론</span>
+                        <span class="author-tag">에세이</span>
+                        <span class="author-tag">사회·문화</span>
+                        <span class="author-tag">페미니즘</span>
+                        <span class="author-tag">자유기고</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Articles -->
+    <section class="featured-stories" id="portfolio">
+        <div class="container">
+            <div class="section-header fade-in-scroll">
+                <div class="section-label">PORTFOLIO</div>
+                <h2 class="section-title">글 모음</h2>
+                <p class="section-subtitle">한겨레21·시네21 연재와 과거 글 아카이브</p>
+            </div>
+
+            <!-- 연재 중: 한겨레21 · 시네21 -->
+            <div class="ongoing-block fade-in-scroll">
+                <h3 class="block-heading">연재 중</h3>
+                <div class="ongoing-columns" id="ongoingColumns"></div>
+            </div>
+
+            <!-- 아카이브 -->
+            <div class="archive-block fade-in-scroll">
+                <div class="archive-header">
+                    <h3 class="block-heading">아카이브</h3>
+                    <button type="button" class="archive-toggle" id="archiveToggle" aria-expanded="false">
+                        <span class="archive-toggle-text">과거 글 전체 보기</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div id="archiveFeatured"></div>
+                <ul class="archive-list" id="archiveList" hidden></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books / Shop -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header fade-in-scroll">
+                <div class="section-label">BOOKS</div>
+                <h2 class="section-title">출간도서 구입하기</h2>
+                <p class="section-subtitle">출간 도서를 장바구니에 담아 주문할 수 있습니다.</p>
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+
+                <div class="book-card fade-in-scroll" data-book-id="1">
+                    <div class="book-cover-wrapper">
+                        <img src="https://image.aladin.co.kr/product/39664/41/cover500/k442130197_1.jpg" alt="드라마 대사로 인생 공부" class="book-cover">
+                        <span class="book-badge new">NEW</span>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">드라마 대사로 인생 공부</h3>
+                        <p class="book-subtitle">내 삶을 비추는 명문장 100 필사집</p>
+                        <p class="book-publisher">오수경 · Birdbox · 2026</p>
+                        <div class="book-price">
+                            <span class="book-price-list">26,000원</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn btn-primary add-to-cart" data-id="1" data-title="드라마 대사로 인생 공부" data-price="26000">
+                                <i class="fas fa-shopping-bag"></i> 장바구니 담기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card fade-in-scroll" data-book-id="2">
+                    <div class="book-cover-wrapper">
+                        <img src="https://image.aladin.co.kr/product/29732/11/cover500/k802838590_1.jpg" alt="드라마의 말들" class="book-cover">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">드라마의 말들</h3>
+                        <p class="book-subtitle">현재를 담아 미래를 비추는 거울</p>
+                        <p class="book-publisher">오수경 · 유유 · 2022</p>
+                        <div class="book-price">
+                            <span class="book-price-list">14,000원</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn btn-primary add-to-cart" data-id="2" data-title="드라마의 말들" data-price="14000">
+                                <i class="fas fa-shopping-bag"></i> 장바구니 담기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card fade-in-scroll" data-book-id="3">
+                    <div class="book-cover-wrapper">
+                        <img src="https://image.aladin.co.kr/product/17550/69/cover500/899497346x_1.jpg" alt="불편할 준비" class="book-cover">
+                        <span class="book-badge coauthor">공저</span>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">불편할 준비</h3>
+                        <p class="book-subtitle">페미니즘을 찾아가는 다섯 개의 지도</p>
+                        <p class="book-publisher">이은의 외 · 시사IN북 · 2018</p>
+                        <div class="book-price">
+                            <span class="book-price-list">15,000원</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn btn-primary add-to-cart" data-id="3" data-title="불편할 준비" data-price="15000">
+                                <i class="fas fa-shopping-bag"></i> 장바구니 담기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card fade-in-scroll" data-book-id="4">
+                    <div class="book-cover-wrapper">
+                        <img src="https://image.aladin.co.kr/product/18557/74/cover500/8964373227_1.jpg" alt="을들의 당나귀 귀" class="book-cover">
+                        <span class="book-badge coauthor">공저</span>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">을들의 당나귀 귀</h3>
+                        <p class="book-subtitle">을들의 당나귀 귀 1</p>
+                        <p class="book-publisher">손희정 외 · 2019</p>
+                        <div class="book-price">
+                            <span class="book-price-list">18,000원</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn btn-primary add-to-cart" data-id="4" data-title="을들의 당나귀 귀" data-price="18000">
+                                <i class="fas fa-shopping-bag"></i> 장바구니 담기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card fade-in-scroll" data-book-id="5">
+                    <div class="book-cover-wrapper">
+                        <img src="https://image.aladin.co.kr/product/6595/31/cover500/8925556944_1.jpg" alt="일 못하는 사람 유니온" class="book-cover">
+                        <span class="book-badge coauthor">공저 · 절판</span>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">일 못하는 사람 유니온</h3>
+                        <p class="book-subtitle">1%가 아닌 99%, 우리들 이야기</p>
+                        <p class="book-publisher">이서영 외 · RHK · 2015</p>
+                        <div class="book-price">
+                            <span class="book-price-list">14,000원</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn btn-disabled" disabled title="품절/절판">품절</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry: Meeting & Lecture -->
+    <section class="inquiry-section" id="inquiry">
+        <div class="container">
+            <div class="section-header fade-in-scroll">
+                <div class="section-label">INQUIRY</div>
+                <h2 class="section-title">모임 초대 &amp; 강연 문의</h2>
+                <p class="section-subtitle">독서 모임, 북토크, 강연 등 작가와의 만남을 요청해 주세요.</p>
+            </div>
+
+            <div class="inquiry-grid">
+                <div class="inquiry-card fade-in-scroll">
+                    <div class="inquiry-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>모임 초대</h3>
+                    <p>독서 모임, 북클럽, 소규모 토론 등 작가를 초대하고 싶으시면 아래 양식을 작성해 주세요.</p>
+                    <form class="inquiry-form" id="meetingForm">
+                        <div class="form-group">
+                            <label for="meetingName">이름 / 단체명</label>
+                            <input type="text" id="meetingName" name="name" placeholder="홍길동 / ○○ 독서모임" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingEmail">이메일</label>
+                            <input type="email" id="meetingEmail" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingDate">희망 일시</label>
+                            <input type="text" id="meetingDate" name="date" placeholder="2026년 8월 중, 평일 저녁 등">
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingDetail">모임 소개 및 요청 사항</label>
+                            <textarea id="meetingDetail" name="detail" placeholder="모임 규모, 주제, 진행 방식 등을 알려주세요."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%">초대 요청 보내기</button>
+                    </form>
+                </div>
+
+                <div class="inquiry-card fade-in-scroll">
+                    <div class="inquiry-card-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>강연 문의</h3>
+                    <p>대학, 기업, 문화센터, 행사 등 강연 및 특강을 요청하시면 검토 후 연락드리겠습니다.</p>
+                    <form class="inquiry-form" id="lectureForm">
+                        <div class="form-group">
+                            <label for="lectureOrg">기관 / 행사명</label>
+                            <input type="text" id="lectureOrg" name="org" placeholder="○○대학교 / ○○문화재단" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lectureEmail">담당자 이메일</label>
+                            <input type="email" id="lectureEmail" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lectureTopic">강연 주제</label>
+                            <select id="lectureTopic" name="topic">
+                                <option value="">주제를 선택해 주세요</option>
+                                <option value="drama">드라마와 일상 — 드라마 관찰기</option>
+                                <option value="writing">글쓰기와 자유기고</option>
+                                <option value="feminism">페미니즘과 사회</option>
+                                <option value="book">출간 도서 북토크</option>
+                                <option value="other">기타 (직접 입력)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lectureDetail">상세 내용</label>
+                            <textarea id="lectureDetail" name="detail" placeholder="일시, 장소, 예상 인원, 강연 시간 등"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%">강연 문의 보내기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="contact">
+        <div class="container">
+            <div class="newsletter-content fade-in-scroll">
+                <div class="section-label">NEWSLETTER</div>
+                <h2 class="section-title">새 글 알림 받기</h2>
+                <p class="newsletter-text">연재 글과 신간 소식을 이메일로 받아보세요.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="이메일 주소" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-button">구독하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 class="footer-title">오수경</h4>
+                    <p class="footer-text">
+                        드라마 관찰자, 자유기고가. 드라마 속 이야기로
+                        일상과 세상을 바라봅니다.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">바로가기</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">글 모음</a></li>
+                        <li><a href="#shop">출간도서</a></li>
+                        <li><a href="#inquiry">문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">연락처</h4>
+                    <p class="footer-email">contact@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 오수경. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>장바구니</h3>
+            <button class="cart-close" id="cartClose" aria-label="닫기">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니가 비어 있습니다.</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>합계</span>
+                <span class="cart-total-amount" id="cartTotal">0원</span>
+            </div>
+            <button class="btn btn-primary cart-checkout" id="cartCheckout" disabled>
+                주문하기 (준비 중)
+            </button>
+            <p class="cart-note">결제 기능은 추후 업데이트 예정입니다.</p>
+        </div>
+    </aside>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
