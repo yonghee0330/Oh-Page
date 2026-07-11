@@ -7,26 +7,23 @@
     <title>오수경 — 드라마 관찰자, 작가</title>
     <meta name="description" content="드라마 관찰자 오수경 작가의 포트폴리오, 기사, 출간도서 주문 페이지">
 
-    <!-- GitHub Pages 프로젝트 사이트 경로 보정 (예: /Oh-Page) -->
-    <script>
-        (function () {
-            var path = location.pathname;
-            if (/\.html$/i.test(path)) {
-                path = path.replace(/[^/]+$/, '');
-            } else if (!path.endsWith('/')) {
-                path += '/';
-            }
-            var base = document.createElement('base');
-            base.href = path || '/';
-            document.head.appendChild(base);
-        })();
-    </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        (function () {
+            var root = '';
+            if (location.hostname.endsWith('github.io')) {
+                var seg = location.pathname.split('/').filter(Boolean)[0];
+                if (seg) root = '/' + seg;
+            }
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = root + '/css/style.css';
+            document.head.appendChild(link);
+        })();
+    </script>
 </head>
 <body class="loaded">
 
@@ -408,6 +405,17 @@
         </div>
     </aside>
 
-    <script src="./js/main.js"></script>
+    <script>
+        (function () {
+            var root = '';
+            if (location.hostname.endsWith('github.io')) {
+                var seg = location.pathname.split('/').filter(Boolean)[0];
+                if (seg) root = '/' + seg;
+            }
+            var script = document.createElement('script');
+            script.src = root + '/js/main.js';
+            document.body.appendChild(script);
+        })();
+    </script>
 </body>
 </html>
